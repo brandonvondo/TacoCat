@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>xaBv Taco Cat Mini-Program</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <style>
+        #maincontainer{
+            margin:0 auto;
+            border:1px solid black;
+            padding:25px;
+        }
+        .btnwide{
+            margin-left:50px;
+            width:80%;
+        }
+        #tacout{
+            width:100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="container">
+            <a class="navbar-brand" href="/Index.html">Taco Cat</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/Index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Solve.html" title="The App">Solve</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Code.html" title="Project Code Display">Code</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/brandonvondo" target="_blank" title="My GitHub">Git</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://xabv.netlify.app/" target="_blank" title="My Dev Portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" title="Coming Soon"> Blog Post/YouTube Explanation</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1 class="mt-5">Taco Cat</h1>
+                <p class="lead">Taco Cat is a program that allows you to input a phrase or word. It will clean up the word leaving <br />only letters and numbers. Then it will reverse the string and determine if it is the same backwards.</p>
+                <hr />
+
+
+            </div>
+            <div id="maincontainer" class="row">
+                <div class="col-6">
+                    <input id="inptaco" placeholder="Enter your word" />
+                </div>
+                <div class="col-3">
+                    <button id="btntaco" class="btn btn-dark btnwide">Check!</button>
+                </div>
+                <div class="col-3">
+                    <button id="btnclear" class="btn btn-warning btnwide">Clear.</button>
+                </div>
+            </div>
+        </div>
+        <hr />
+
+
+        <div class="row">
+            <p id="tacout" class="text-center"></p>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script>
+        $("#btntaco").on("click", function () {
+            if ($("#inptaco").val() != "") {
+                let orig = $("#inptaco").val();
+                let word = $("#inptaco").val().toLowerCase() /*taking the value of our input field and forcing it to lowercase*/
+                    .replace(/\s/g, '')/*replacing spaces*/.replace(/\./g, '');/*replacing .*/
+
+                //next line is creating a variable to hold the new results with leaving word the same
+                let revWord = word.split("")/*acting on variable word as if it were an array + splitting letters*/.reverse().join("");
+
+                if (word === revWord) { /*checking if our changed variable is equal to our original word*/
+                    $("#tacout").html(`Your original input was "${orig}" after being cleaned it up is ${revWord} so it definitely is a Palindrome.`)
+                }
+                else { /*if it isn't we are out putting a failure message*/
+                    $("#tacout").html(`"${orig}" reversed is ${revWord} is it a Palindrome? You tell me. (No)`)
+                }
+            }
+            else $("#tacout").html(`Please enter a valid word or phrase.`)
+        });
+
+        $("#btnclear").on("click", function () { /*simple button to clear the results and the input field*/
+            $("#inptaco").val("");
+            $("#tacout").text("");
+        })
+    </script>
+</body>
+
+</html>
