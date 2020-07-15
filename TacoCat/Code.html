@@ -62,6 +62,7 @@
 <code class="language-js">$("#btntaco").on("click", function () { /*creating an unnamed function with a click event on our start button*/
 if ($("#inptaco").val() != "") { /*super simple check to see if the input field is blank*/
 let orig = $("#inptaco").val(); /*holding our input for a cleaner output after we get our results*/
+let origverse = orig.split("").reverse().join("") /*reverse the input with all of punctuation and capitalization the same*/
 let word = $("#inptaco").val().toLowerCase() /*taking the value of our input field and forcing it to lowercase*/
 .replace(/\s/g, '')/*replacing spaces*/.replace(/\./g, '');/*replacing .*/
 
@@ -69,10 +70,10 @@ let word = $("#inptaco").val().toLowerCase() /*taking the value of our input fie
 let revWord = word.split("")/*acting on variable word as if it were an array + splitting letters*/.reverse().join("");
 
 if (word === revWord) { /*checking if our changed variable is equal to our original word*/
-$("#tacout").html(`Your original input was "${orig}" after being cleaned it up is ${revWord} so it definitely is a Palindrome.`)
+$("#tacout").html(`Your original input was "${orig}" reversed it is "${origverse}" and after being cleaned it up is ${revWord} so it definitely is a Palindrome.`)
 }
 else { /*if it isn't we are out putting a failure message*/
-$("#tacout").html(`"${orig}" reversed is ${revWord} is it a Palindrome? You tell me. (No)`)
+$("#tacout").html(`"${orig}" reversed is ${origverse} is it a Palindrome? You tell me. (No)`)
 }
 }
 else $("#tacout").html(`Please enter a valid word or phrase.`)
