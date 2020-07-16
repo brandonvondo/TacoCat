@@ -1,0 +1,15 @@
+﻿
+#maincontainer {
+    margin: 0 auto;
+    border: 1px solid black;
+    padding: 25px;
+}
+
+.btnwide {
+    margin-left: 50px;
+    width: 80%;
+}
+
+#tacout {
+    width: 100%;
+}
