@@ -1,5 +1,10 @@
 ﻿@import url('https://fonts.googleapis.com/css?family=Raleway');
 
+@font-face {
+    font-family: 'alphabetized cassette tapes';
+    src: url('../font/alphabetized-cassette-tapes.regular.ttf') format('truetype');
+}
+
 #maincontainer {
     margin: 0 auto;
     border: 1px solid black;

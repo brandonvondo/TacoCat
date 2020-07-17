@@ -88,6 +88,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favi\site.webmanifest" />
+    <Content Include="font\alphabetized-cassette-tapes.regular.ttf" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
