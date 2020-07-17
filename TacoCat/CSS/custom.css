@@ -77,21 +77,6 @@ body {
     background-color: #DC3545;
 }
 
-        .dropdown .btn:hover {
-            background: cyan;
-            color: #000;
-        }
-
-        .dropdown .btn:active {
-            background: cyan;
-            color: #000;
-        }
-
-        .dropdown .btn:focus {
-            background: cyan;
-            color: #000;
-        }
-
 .dropdown-menu .dropdown-item {
     display: inline-block;
     background-color: #DC3545;
@@ -175,7 +160,7 @@ html{
     padding: 5px;
     text-align: center;
     background-color: #DC3545;
-    border: solid 1px red;
+    border: solid 1px #A52935;
     color: yellow;
     font-family: 'alphabetized cassette tapes';
     font-size: 30px;
