@@ -12,16 +12,23 @@
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favi/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favi/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favi/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link href="CSS/custom.css" rel="stylesheet" />
     <link href="CSS/prism.css" rel="stylesheet" />
+    <link href="scroll.css" rel="stylesheet" />
+
+
 </head>
 
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-bottom">
         <div class="container">
-            <a class="navbar-brand" href="/Index.html">Taco Cat</a>
+            <a class="navbar-brand" href="/Index.html"><span class="navtext">Taco Cat</span></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -29,23 +36,31 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
                         <a class="nav-link" href="/Index.html">
-                            Home
+                            <span class="navtext">Home</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Solve.html" title="The App">Solve</a>
+                        <a class="nav-link" href="/Solve.html" title="The App"><span class="navtext">Solve</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Code.html" title="Project Code Display">Code</a>
+                        <a class="nav-link" href="/Code.html" title="Project Code Display"><span class="navtext">Code</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/brandonvondo" target="_blank" title="My GitHub">Git</a>
+                        <a class="nav-link" href="https://github.com/brandonvondo" target="_blank" title="My GitHub"><span class="navtext">Git</span></a>
+                    </li>
+                    <li class="nav-item dropup">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="navtext3">My Other Work</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="https://xabvsoaf.netlify.app/ "><span class="navtext3">Sum of All Fears</span></a>
+                            <a class="dropdown-item" href="https://xabvssh.netlify.app/"><span class="navtext3">Sunset Hills</span></a>
+                            <a class="dropdown-item" href="https://xabvfizzbuzz.netlify.app/"><span class="navtext3">Fizzbuzz</span></a>
+                            <a class="dropdown-item" href="https://xabv.net/"><span class="navtext3">Back to my portfolio</span></a>
+                        </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://xabv.netlify.app/" target="_blank" title="My Dev Portfolio">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" title="Coming Soon"> Blog Post/YouTube Explanation</a>
+                        <a class="nav-link" href="#" title="Coming Soon"><span class="navtext2">Blog Post/YouTube Explanation</span></a>
                     </li>
                 </ul>
             </div>
@@ -56,8 +71,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1 class="mt-5">Behind the Taco</h1>
-                <p class="lead">Here is the code behind this application</p>
+                <p class="bodyp2">Behind the Taco</p>
                 <p>
                     <pre class="language-js">
 <code class="language-js">$("#btntaco").on("click", function () { /*creating an unnamed function with a click event on our start button*/

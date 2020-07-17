@@ -1,4 +1,5 @@
-﻿
+﻿@import url('https://fonts.googleapis.com/css?family=Raleway');
+
 #maincontainer {
     margin: 0 auto;
     border: 1px solid black;
@@ -6,10 +7,205 @@
 }
 
 .btnwide {
-    margin-left: 50px;
-    width: 80%;
+    width: 25%;
 }
 
 #tacout {
     width: 100%;
+}
+
+body {
+    background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
+}
+
+.header {
+    padding: 60px;
+    text-align: center;
+    color: yellow;
+    text-shadow: 4px 2px #726A22;
+    font-size: 80px;
+    background-color: #DC3545;
+    font-family: 'alphabetized cassette tapes';
+}
+
+.header2 {
+    padding: 10px;
+    text-align: center;
+    color: yellow;
+    text-shadow: 4px 2px #726A22;
+    font-size: 80px;
+    background-color: #DC3545;
+    font-family: 'alphabetized cassette tapes';
+}
+
+.navtext{
+    color:yellow;
+    font-size:40px;
+    font-family:'alphabetized cassette tapes';
+}
+
+.navtext2{
+    color:dimgrey;
+    font-size:40px;
+    font-family:'alphabetized cassette tapes'
+}
+.navtext3 {
+    color: yellow;
+    font-size: 30px;
+    font-family: 'alphabetized cassette tapes';
+}
+
+.dropup {
+    list-style: none;
+    background: #DC3545;
+    padding: 10px;
+    display: inline-block;
+}
+
+.dropdown .nav-link {
+    color: #DC3545;
+    text-decoration: none;
+}
+
+.dropdown .dropdown-menu a {
+    color: #DC3545;
+    background-color: #DC3545;
+    text-decoration: none;
+}
+
+.dropdown-menu {
+    background-color: #DC3545;
+}
+
+        .dropdown .btn:hover {
+            background: cyan;
+            color: #000;
+        }
+
+        .dropdown .btn:active {
+            background: cyan;
+            color: #000;
+        }
+
+        .dropdown .btn:focus {
+            background: cyan;
+            color: #000;
+        }
+
+.dropdown-menu .dropdown-item {
+    display: inline-block;
+    background-color: #DC3545;
+    width: 100%;
+    padding: 10px 5px;
+}
+
+.container .dropdown .dropdown-menu a:hover {
+    color: #fff;
+    background-color: #b91773;
+    background-color: #DC3545;
+    border-color: #fff;
+}
+
+.dropdown-divider {
+    background-color: yellow;
+    color: yellow;
+}
+
+.bodyp {
+    font-size: 40px;
+    font-family: 'alphabetized cassette tapes';
+    margin-top: 10%;
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
+    background-color: #DC3545;
+    opacity: .7;
+    color: yellow;
+}
+
+.bodyp2 {
+    font-size: 40px;
+    font-family: 'alphabetized cassette tapes';
+    margin-top:1%;
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
+    background-color: #DC3545;
+    opacity: .7;
+    color: yellow;
+}
+
+#inptaco {
+    padding: 1px;
+    text-align: center;
+    background-color: lightcoral;
+    font-family: 'alphabetized cassette tapes';
+    color: yellow;
+    font-size: 50px;
+    box-shadow: none;
+}
+
+::placeholder {
+    color: #685419;
+}
+
+.centerforce {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+html{
+    height:100%;
+}
+
+.redbutext {
+    font-family: 'alphabetized cassette tapes';
+    color: #DC3545;
+    font-size: 40px;
+}
+
+.yelbutext {
+    font-family: 'alphabetized cassette tapes';
+    color: yellow;
+    font-size: 40px;
+}
+
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #DC3545;
+    border: solid 1px red;
+    color: yellow;
+    font-family: 'alphabetized cassette tapes';
+    font-size: 30px;
+}
+
+#panel {
+    padding: 50px;
+}
+
+input:focus {
+    outline-width: 0;
+}
+
+#btntaco:hover {
+    color: yellow !important;
+}
+
+#btnclear:hover {
+    color: #DC3545 !important;
+}
+
+#btntaco:focus {
+    color: yellow !important;
+}
+
+#btnclear:focus {
+    color: #DC3545 !important;
+}
+
+#example{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:20px;
 }

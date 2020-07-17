@@ -10,18 +10,23 @@
 
     <title>xaBv Taco Cat Coding Challenge</title>
 
-    <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favi/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favi/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favi/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link href="CSS/custom.css" rel="stylesheet" />
+    <link href="CSS/prism.css" rel="stylesheet" />
+
+
 </head>
 
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-bottom">
         <div class="container">
-            <a class="navbar-brand" href="/Index.html">Taco Cat</a>
+            <a class="navbar-brand" href="/Index.html"><span class="navtext">Taco Cat</span></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -29,23 +34,31 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
                         <a class="nav-link" href="/Index.html">
-                            Home
+                            <span class="navtext">Home</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Solve.html" title="The App">Solve</a>
+                        <a class="nav-link" href="/Solve.html" title="The App"><span class="navtext">Solve</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Code.html" title="Project Code Display">Code</a>
+                        <a class="nav-link" href="/Code.html" title="Project Code Display"><span class="navtext">Code</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/brandonvondo" target="_blank" title="My GitHub">Git</a>
+                        <a class="nav-link" href="https://github.com/brandonvondo" target="_blank" title="My GitHub"><span class="navtext">Git</span></a>
+                    </li>
+                    <li class="nav-item dropup">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="navtext3">My Other Work</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="https://xabvsoaf.netlify.app/ "><span class="navtext3">Sum of All Fears</span></a>
+                            <a class="dropdown-item" href="https://xabvssh.netlify.app/"><span class="navtext3">Sunset Hills</span></a>
+                            <a class="dropdown-item" href="https://xabvfizzbuzz.netlify.app/"><span class="navtext3">Fizzbuzz</span></a>
+                            <a class="dropdown-item" href="https://xabv.net/"><span class="navtext3">Back to my portfolio</span></a>
+                        </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://xabv.netlify.app/" target="_blank" title="My Dev Portfolio">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" title="Coming Soon"> Blog Post/YouTube Explanation</a>
+                        <a class="nav-link" href="#" title="Coming Soon"><span class="navtext2">Blog Post/YouTube Explanation</span></a>
                     </li>
                 </ul>
             </div>
@@ -55,44 +68,53 @@
     <!-- Page Content -->
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-12 text-center">
-                <h1 class="mt-5">Taco Cat</h1>
-                <p class="lead">Taco Cat is a program that allows you to input a phrase or word. It will clean up the word leaving <br />only letters and numbers. Then it will reverse the string and determine if it is the same backwards.</p>
+            <div class="col-lg-12">
+                <div class="header2">
+                    <p>Tac-o-caT</p>
+                </div>
+            </div>
+        </div>
+                
+        <div id="panel">Taco Cat is a program that allows you to input a phrase or word. It will clean up the word leaving <br />only letters and numbers. Then it will reverse the string and determine if it is the same backwards.<br /> Set to filter out the following : contained with <span id="example">() [("),('),( ),(.),(,)]</span> anything else will break functionality.</div>
+                <div id="flip">Click to toggle info</div>
                 <hr />
 
-
+            <div class="row">
+                <div class="col centerforce">
+                            <input type="text" id="inptaco" class="border border-danger" placeholder="Enter your word!">
+                </div>
             </div>
-            <div id="maincontainer" class="row">
-                <div class="col-6">
-                    <input id="inptaco" placeholder="Enter your word" />
-                </div>
-                <div class="col-3">
-                    <button id="btntaco" class="btn btn-dark btnwide">Check!</button>
-                </div>
-                <div class="col-3">
-                    <button id="btnclear" class="btn btn-warning btnwide">Clear.</button>
-                </div>
+
+
+        <div class="row">
+            <div class="col-6 centerforce">
+                <button id="btntaco" class="btn btn-danger btnwide yelbutext">Check!</button>
+            </div>
+            <div class="col-6 centerforce">
+                <button id="btnclear" class="btn btn-warning btnwide redbutext">Clear.</button>
             </div>
         </div>
         <hr />
 
 
         <div class="row">
-            <p id="tacout" class="text-center"></p>
+            <p id="tacout" class="text-center bodyp2"></p>
         </div>
     </div>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="../JS/jquery-3.5.1.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script>
+        $("#panel").hide();
+
         $("#btntaco").on("click", function () {
             if ($("#inptaco").val() != "") {
-                let orig = $("#inptaco").val();
-                let origverse = orig.split("").reverse().join("") /*reverse the input with all of punctuation and capitalization the same*/
-                let word = $("#inptaco").val().toLowerCase() /*taking the value of our input field and forcing it to lowercase*/
-                    .replace(/\s/g, '')/*replacing spaces*/.replace(/\./g, '');/*replacing .*/
+                let orig = $("#inptaco").val().replace(/\"/g, '');
+                let origverse = orig.replace(/\"/g, '').split("").reverse().join(""); /*reverse the input with all of punctuation and capitalization the same*/
+                let word = $("#inptaco").val().toLowerCase().replace(/\'/g, '').replace(/\"/g, '').replace(/\s/g, '').replace(/\./g, '');
+                /*taking the value of our input field and forcing it to clean up using regex*/
 
                 //next line is creating a variable to hold the new results with leaving word the same
                 let revWord = word.split("")/*acting on variable word as if it were an array + splitting letters*/.reverse().join("");
@@ -111,6 +133,12 @@
             $("#inptaco").val("");
             $("#tacout").text("");
         })
+
+        $(document).ready(function () {
+            $("#flip").click(function () {
+                $("#panel").slideToggle("slow");
+            });
+        });
     </script>
 </body>
 
